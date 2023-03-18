@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{%block content%}
+    
+    <div class="container" id="contenedor-idgs">
+        <h1 id="titulo-idgs">Hola, Bienvenido a IDGS</h1>
+        <br>
+        <div id="contenedor-btn-alumno">
+            <form name="sent" action="/getAlum" method="post">
+                <input type="hidden" name="csrf_token" value="{{csrf_token()}}"/>
+                <input class="btn btn-primary" type="submit" name="alumnos" value="Alumnos" id="btnAlum">
+            </form>
+        </div>
+        <br>
+        <div id="contenedor-btn-maestro">
+            <form name="sent" action="/getMaestros" method="post">
+                <input type="hidden" name="csrf_token" value="{{csrf_token()}}"/>
+                <input type="submit" class="btn btn-success" name="maestros" value="Maestros" id="btnMaes">
+            </form>
+        </div>
+    </div>
+        
+{%endblock%}

@@ -1,0 +1,20 @@
+#contenedor-idgs{
+    display: grid;
+    place-items: center;
+}
+
+#titulo-idgs{
+    font-size: 56px;
+}
+
+#btnMaes{
+    padding: 50px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#btnAlum{
+    padding: 50px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}

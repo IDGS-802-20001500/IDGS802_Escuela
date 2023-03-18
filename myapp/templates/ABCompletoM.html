@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+
+{%block content%}
+
+    {%from "_macros.html" import render_field%}
+
+    <div class="container">
+        <div class="row">
+            <a href="/insertMaestro" class="btn btn-warning"><i class="icon-pencil icon-white"></i>Agregar</a>
+            <h3>Maestros de IDGS</h3>
+
+            <table class="table" id="tabla-maestros">
+                <thead>
+                    <tr class="tr-head">
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Correos</th>
+                        <th>Eliminar</th>
+                        <th>Modificar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for maes in maestro%}
+                    <tr>
+                        
+                        <td>{{maes[1]}}</td>
+                        <td>{{maes[2]}}</td>
+                        <td>{{maes[3]}}</td>
+                        <td><a href="eliminarMaestro?id={{maes[0]}}" class="btn btn-danger"><i class="icon-remove icon-white"></i> Eliminar</a></td>
+                        <td><a href="modificarMaestro?id={{maes[0]}}" class="btn btn-warning"><i class="icon-pencil icon-white"></i> Modificar</a></td>
+                        
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+        
+{%endblock%}
